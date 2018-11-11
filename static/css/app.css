@@ -20,6 +20,13 @@
     height: 14rem;
 }
 
+.center_it_too
+{
+    display: grid;
+    place-items: center;
+    height: 8rem;
+}
+
 .zip
 {
     max-width: 10rem;

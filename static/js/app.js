@@ -28,8 +28,6 @@ function init_date()
     var dd = '0';
     var mm = '0';
 
-    console.log(today);
-
     if(dtemp < 10)
     { dd += today.dd.toString(); }
     else
@@ -40,7 +38,5 @@ function init_date()
     else
     { mm = today.mm.toString(); }
 
-    var curDate = today.yyyy.toString() + '-' + mm + '-' + dd;
-    console.log(curDate);
-    $('#last_date').attr('max', curDate);
+    $('#last_date').attr('max', today.yyyy.toString() + '-' + mm + '-' + dd);
 };

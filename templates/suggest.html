@@ -23,22 +23,29 @@
       <div class="grid-x grid-padding-x">
         <div class="large-12 cell">
           <div class="grid-x grid-padding-x">
+            <div class="large-3 medium-2 cell">
+            </div>
+            <div class="large-6 medium-8 cell" style="text-align: center;">
+              <p>Given your zipcode [<strong>{{ input['zipcode'] }}</strong>] and the last day you checked your tire pressure [<strong>{{ input['lastcheck'] }}</strong>] we have calculated a suggested date to next Check Your Tires!</p>
+            </div>
+            <div class="large-3 medium-2 cell">  
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="grid-x grid-padding-x">
+        <div class="large-12 cell">
+          <div class="grid-x grid-padding-x">
             <div class="large-4 medium-3 cell">
             </div>
             <div class="large-4 medium-6 cell">
-              <div class="callout" id="bad">
+              <div class="callout">
                 <form class="center_it">
                   <div>
-                    <h5 style="text-align: center;">
-                      we recommend that you<br />Check Your Tires on
-                    </h5>
-                    <br />
                     <h3>
                       {{ result['dd'] }} {{ result['month'] }} {{ result['yyyy'] }}
                     </h3>
-                    <!--{% for data in all %}
-                    {{ data['date'] }} {{ data['high'] }} {{ data['low'] }}<br />
-                    {% endfor %}-->
                   </div>
                 </form>
               </div>
@@ -48,9 +55,23 @@
           </div>
         </div>
       </div>
+      <br />
+      <div class="grid-x grid-padding-x">
+        <div class="large-12 cell">
+          <div class="grid-x grid-padding-x">
+            <div class="large-3 medium-2 cell">
+            </div>
+            <div class="large-6 medium-8 cell" style="text-align: center;">
+              <p>In general, it is good practice to check your tire pressure about once every month. You'll need to check more often when temperatures are changing significantly.</p>
+            </div>
+            <div class="large-3 medium-2 cell">  
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="grid-x grid-padding-x">
           <div class="large-12 cell">
-            <div class="center_it">
+            <div class="center_it_too">
               <a class="button" href="{{ url_for('index') }}">
                 GO BACK
               </a>
