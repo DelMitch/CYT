@@ -1,0 +1,40 @@
+.button_date
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 8rem;
+}
+
+.button_submit
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -0.5rem;
+    width: 6rem;
+}
+
+.center_it
+{
+    display: grid;
+    place-items: center;
+    height: 14rem;
+}
+
+.zip
+{
+    max-width: 10rem;
+}
+
+#last_date
+{
+    max-width: 8rem;
+}
+
+.labels
+{
+    text-align: right;
+    display: block;
+    float: left;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+}

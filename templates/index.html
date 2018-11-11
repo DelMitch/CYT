@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYT</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.png')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/foundation.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/foundation-datepicker.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome-free-5.5.0-web/css/all.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome-free-5.5.0-web/css/solid.css') }}">
+  </head>
+  <body onload="init_date()">
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x">
+        <div class="large-12 cell">
+          <h1 style="text-align: center;">Check Your Tires</h1>
+        </div>
+      </div>
+      <br />
+      <div class="grid-x grid-padding-x">
+        <div class="large-12 cell">
+          <div class="grid-x grid-padding-x">
+            <div class="large-3 medium-2 cell">
+            </div>
+            <div class="large-6 medium-8 cell" style="text-align: center;">
+              <p>Is winter coming? Is spring on its way? Temperatures are changing and that means your tire pressure is too.</p>
+              <p>Enter your zip code and the last day you checked your tire pressure below and we'll suggest when next to check.</p>
+            </div>
+            <div class="large-3 medium-2 cell">  
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="grid-x grid-padding-x">
+        <div class="large-12 cell">
+          <div class="grid-x grid-padding-x">
+            <div class="large-4 medium-3 cell">
+            </div>
+            <div class="large-4 medium-6 cell">
+              <div class="callout" id="bad">
+                <form data-abide name="info" id="the_form" action="{{ url_for('suggest') }}" class="center_it" method="POST">
+                  <div>
+                    <label class="labels">
+                      ZIP CODE: 
+                    </label>
+                    <input class="zip" name="zipcode" type="text" placeholder="5-digit zip code" required pattern="[0-9]{5}" maxlength="5">
+                  </div>
+                  <div>
+                    <label class="labels">
+                      DATE: 
+                    </label>
+                    <input name="lastcheck" type="date" id="last_date" required value="2018-01-01" min="2010-01-01" max="2018-01-01" />
+                  </div>
+                  <button class="button button_submit" type="submit" >
+                    SUBMIT
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="large-4 medium-3 cell">  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/vendor/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/what-input.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/foundation.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/foundation-datepicker.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/locales/foundation-datepicker.en.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>
